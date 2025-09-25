@@ -1,0 +1,8 @@
+docker build -t cli .
+docker build . -t cli
+
+docker run --rm cli php index.php
+
+docker run -v .:/var/www/html --rm cli composer init --name cli/console-app --description "console aplication" --author "felipesantos2"
+docker run -v .:/var/www/html --rm cli composer require
+docker run -v .:/var/www/html --rm cli composer require symfony/var-dumper
